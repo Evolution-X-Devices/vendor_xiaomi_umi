@@ -54,7 +54,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/umi/proprietary/vendor/etc/camera/almalence_sr_params_wide_64M.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/almalence_sr_params_wide_64M.config \
     vendor/xiaomi/umi/proprietary/vendor/etc/camera/beauty_ui9_intelligent_params.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beauty_ui9_intelligent_params.config \
     vendor/xiaomi/umi/proprietary/vendor/etc/camera/bokehParams.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bokehParams.json \
-    vendor/xiaomi/umi/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
     vendor/xiaomi/umi/proprietary/vendor/etc/camera/com.xiaomi.dcal.wd.golden:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi.dcal.wd.golden \
     vendor/xiaomi/umi/proprietary/vendor/etc/camera/com.xiaomi.dcal.wu.fake:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi.dcal.wu.fake \
     vendor/xiaomi/umi/proprietary/vendor/etc/camera/com.xiaomi.dcal.wu.golden:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi.dcal.wu.golden \
@@ -216,6 +215,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/umi/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
 
 PRODUCT_PACKAGES += \
+    libOpenCL_system \
+    libcameraimpl \
+    libmicampostproc_client \
+    libmqsas \
+    libopencl-camera \
+    vendor.xiaomi.hardware.campostproc@1.0 \
     audio.primary.umi \
     liba2dpoffload_umi \
     libaudio_log_utils \
@@ -330,9 +335,13 @@ PRODUCT_PACKAGES += \
     fingerprint.fpc_fod.default \
     fingerprint.goodix_fod.default \
     vendor.qti.hardware.sensorscalibrate@1.0-impl \
+    libHalSuperSensorServer \
     libMIAIHDRhvx_interface \
     libSNPE \
+    libSuperSensor \
+    libSuperSensorCPU \
     libalAILDC \
+    libalCFR \
     libalLDC \
     libalhLDC \
     libarcdualcamsat \
@@ -383,6 +392,8 @@ PRODUCT_PACKAGES += \
     libgf_hal \
     libhta \
     libipebpsstriping \
+    libmiai_deblur \
+    libmialgo_ie_capture \
     libmialgo_ie_preview \
     libmialgo_image_colourkeeping \
     libmialgo_rfs \
@@ -391,6 +402,7 @@ PRODUCT_PACKAGES += \
     libmialgo_video_colourkeeping \
     libmialgo_video_enhance \
     libmialgo_video_seg \
+    libmialgoengine \
     libmibokeh_845_video \
     libmibokeh_855 \
     libmpbase \
@@ -401,6 +413,7 @@ PRODUCT_PACKAGES += \
     libnpu \
     libofflinelog \
     libos \
+    librelight_only \
     libremosaic_wrapper \
     libremosaichvx_stub \
     libremosaiclib \
@@ -421,6 +434,7 @@ PRODUCT_PACKAGES += \
     libssc_default_listener \
     libst_soft_isp_calc_exposure_shared \
     libst_soft_isp_shared \
+    libsupermoon \
     libsymphony-cpu \
     libsynx \
     libthreadutils \
@@ -473,6 +487,7 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     com.android.hotwordenrollment.common.util \
     batterysecret \
+    f2player \
     hvdcp_opti \
     vendor.qti.hardware.sensorscalibrate@1.0-service \
     init.qcom.sensors \
